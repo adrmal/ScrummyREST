@@ -17,11 +17,11 @@ public class NoteController {
     static {
         notes = new ArrayList<>();
         Note note1 = new Note();
-        note1.setTitle("title1");
-        note1.setContent("content1");
+        note1.setTitle("title of first example note");
+        note1.setContent("example content which is made for example only");
         Note note2 = new Note();
-        note2.setTitle("title2");
-        note2.setContent("content2");
+        note2.setTitle("this is the example note");
+        note2.setContent("the example notes should be removed when the database will be ready");
         notes.add(note1);
         notes.add(note2);
     }
