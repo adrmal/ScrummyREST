@@ -1,0 +1,50 @@
+TUTORIAL DEPLOYMENTU NA HEROKU
+===================================
+
+Tutorial na heroku.com - https://devcenter.heroku.com/articles/getting-started-with-java
+
+
+pom.xml - taki jak w tym projekcie (ważne żeby były pluginy)
+
+
+trzeba dodać plik .env (może być pusty, są w nim jakieś zmienne KEY=VALUE)
+
+
+trzeba dodać plik Procfile (mówi serwerowi Heroku, jakim poleceniem uruchamiać aplikację)
+zawartość powinna być taka:
+web: java -jar target/NAZWA.jar
+(żeby wygenerować ten plik .jar, trzeba wywołać polecenie mvn clean install)
+
+
+trzeba dodać plik src/main/resources/application.properties,
+a w nim umieścić linijkę ustawiającą port, na którym będzie działać aplikacja (domyślnie działa na 8080 i wysypuje się na Heroku)
+server.port=${PORT:5000}
+
+
+klasa Main (@ComponentScan mówi, w jakich pakietach są kontrolery REST-owe):
+
+@SpringBootApplication
+@ComponentScans({
+        @ComponentScan("rest")
+})
+public class Main {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
+}
+
+
+klasa XyzController:
+
+@RestController
+@RequestMapping(path = "/rest/users")
+public class UserController {
+
+    @RequestMapping(path = "", method = GET)
+    public List<User> getAllUsers() {
+        return userRepository.getAllUsers();
+    }
+
+}
