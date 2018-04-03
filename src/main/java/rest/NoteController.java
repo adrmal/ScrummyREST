@@ -2,14 +2,15 @@ package rest;
 
 import model.Note;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.springframework.web.bind.annotation.RequestMethod.*;
+
 @RestController
-@RequestMapping(path = "/rest")
+@RequestMapping(path = "/rest/notes")
 public class NoteController {
 
     private static List<Note> notes;
@@ -26,7 +27,7 @@ public class NoteController {
         notes.add(note2);
     }
 
-    @RequestMapping(path = "/notes", method = RequestMethod.GET)
+    @RequestMapping(path = "", method = GET)
     public List<Note> getAllNotes() {
         return notes;
     }

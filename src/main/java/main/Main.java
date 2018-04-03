@@ -7,7 +7,8 @@ import org.springframework.context.annotation.ComponentScans;
 
 @SpringBootApplication
 @ComponentScans({
-        @ComponentScan("rest")
+        @ComponentScan("rest"),
+        @ComponentScan("view")
 })
 public class Main {
 
