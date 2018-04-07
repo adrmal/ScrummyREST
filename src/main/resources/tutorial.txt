@@ -4,10 +4,13 @@ TUTORIAL DEPLOYMENTU NA HEROKU
 Tutorial na heroku.com - https://devcenter.heroku.com/articles/getting-started-with-java
 
 
+
 pom.xml - taki jak w tym projekcie (ważne żeby były pluginy)
 
 
+
 trzeba dodać plik .env (może być pusty, są w nim jakieś zmienne KEY=VALUE)
+
 
 
 trzeba dodać plik Procfile (mówi serwerowi Heroku, jakim poleceniem uruchamiać aplikację)
@@ -16,17 +19,18 @@ web: java -jar target/NAZWA.jar
 (żeby wygenerować ten plik .jar, trzeba wywołać polecenie mvn clean install)
 
 
+
 trzeba dodać plik src/main/resources/application.properties,
-a w nim umieścić linijkę ustawiającą port, na którym będzie działać aplikacja (domyślnie działa na 8080 i wysypuje się na Heroku)
+a w nim umieścić linijkę ustawiającą port, na którym będzie działać aplikacja (domyślnie działa na 8080 i wysypuje się na Heroku):
 server.port=${PORT:5000}
+
 
 
 klasa Main (@ComponentScan mówi, w jakich pakietach są kontrolery REST-owe):
 
 @SpringBootApplication
-@ComponentScans({
-        @ComponentScan("rest")
-})
+@ComponentScan("rest")
+@ComponentScan("view")
 public class Main {
 
     public static void main(String[] args) {
@@ -36,15 +40,123 @@ public class Main {
 }
 
 
+
 klasa XyzController:
 
 @RestController
-@RequestMapping(path = "/rest/users")
-public class UserController {
+@RequestMapping(path = "/rest/notes")
+public class NoteController {
 
     @RequestMapping(path = "", method = GET)
-    public List<User> getAllUsers() {
-        return userRepository.getAllUsers();
+    public List<User> getAllNotes() {
+        return noteRepository.findAll();
     }
 
 }
+
+
+
+BAZA DANYCH
+===================================
+
+w pom.xml dodać:
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+    <version>1.5.2.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>javax.persistence</groupId>
+    <artifactId>persistence-api</artifactId>
+    <version>1.0.2</version>
+</dependency>
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.2.1</version>
+</dependency>
+
+
+
+w pliku application.properties dodać linijki:
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:postgresql://ec2-54-243-54-6.compute-1.amazonaws.com:5432/d3oep8nh2roo02?user=kdyemcyicpkobv&password=9c9f0ff068a5b8920883b6c78d8ffc4f6cea927713324397e9f2348c410ce190&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
+
+(adres do bazy danych jest postaci : jdbc:postgresql://host:port/NAZWA_BAZY?user=LOGIN&password=HASŁO&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory)
+
+
+
+repozytorium JPA (puste, bo wszystkie metody dziedziczy z CrudRepository):
+
+public interface NoteRepository extends CrudRepository<Note, Long> {
+}
+
+
+
+w kontrolerach REST-owych repozytoria injectuje się za pomocą @Autowired:
+
+@Autowired
+private NoteRepository noteRepository;
+
+
+
+klasy-encje:
+
+@Getter
+@Setter
+@Entity
+public class Note {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+    @Column
+    private String title;
+    @Column
+    private String content;
+
+}
+
+
+
+klasa Main:
+
+@SpringBootApplication
+@EnableJpaRepositories(basePackages = "persistence")
+@EntityScan(basePackages = "model")
+@ComponentScan("rest")
+@ComponentScan("view")
+public class Main {
+
+    @Value("${spring.datasource.url}")
+    private String dbUrl;
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
+    @Bean
+    public DataSource dataSource() throws SQLException {
+        if(dbUrl == null || dbUrl.isEmpty()) {
+            return new HikariDataSource();
+        }
+        else {
+            HikariConfig config = new HikariConfig();
+            config.setJdbcUrl(dbUrl);
+            return new HikariDataSource(config);
+        }
+    }
+
+}
+
+@EnableJpaRepositories(basePackages = "persistence") - skanowanie pakietów, w których są repozytoria
+
+@EntityScan(basePackages = "model") - skanowanie pakietów, w których są encje
+
+@Value("${spring.datasource.url}")
+private String dbUrl;              - pobranie URL-a do bazy danych z pliku application.properties
+
+metoda dataSource() - jakaś konfiguracja bazy danych (m. in. ustawienie URL-a do bazy)
