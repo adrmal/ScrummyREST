@@ -154,9 +154,9 @@ public class Main {
 
 @EnableJpaRepositories(basePackages = "persistence") - skanowanie pakietów, w których są repozytoria
 
-@EntityScan(basePackages = "model") - skanowanie pakietów, w których są encje
+@EntityScan(basePackages = "model")                  - skanowanie pakietów, w których są encje
 
 @Value("${spring.datasource.url}")
-private String dbUrl;              - pobranie URL-a do bazy danych z pliku application.properties
+private String dbUrl;                                - pobranie URL-a do bazy danych z pliku application.properties
 
-metoda dataSource() - jakaś konfiguracja bazy danych (m. in. ustawienie URL-a do bazy)
+metoda dataSource()                                  - jakaś konfiguracja bazy danych (m. in. ustawienie URL-a do bazy)
