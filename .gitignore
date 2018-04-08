@@ -1,4 +1,4 @@
 /target/
+/.idea/workspace.xml
 .env
-.idea/
 *.iml

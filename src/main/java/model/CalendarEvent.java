@@ -21,5 +21,7 @@ public class CalendarEvent {
     private Date date;
     @Column
     private String content;
+    @Column
+    private String userId;
 
 }
