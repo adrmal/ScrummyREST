@@ -1,10 +1,10 @@
 package rest;
 
-import model.CalendarEvent;
+import model.PlannedIssue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import persistence.CalendarEventRepository;
+import persistence.PlannedIssueRepository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,19 +12,19 @@ import java.util.List;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 @RestController
-@RequestMapping(path = "/rest/events")
-public class CalendarEventController {
+@RequestMapping(path = "/rest/plannedIssues")
+public class PlannedIssueController {
 
     @Autowired
-    private CalendarEventRepository calendarEventRepository;
+    private PlannedIssueRepository plannedIssueRepository;
 
     @RequestMapping(path = "", method = GET)
-    public List<CalendarEvent> getAllCalendarEvents() {
-        List<CalendarEvent> events = new ArrayList<>();
-        calendarEventRepository
+    public List<PlannedIssue> getAllPlannedIssues() {
+        List<PlannedIssue> plannedIssues = new ArrayList<>();
+        plannedIssueRepository
                 .findAll()
-                .forEach(events::add);
-        return events;
+                .forEach(plannedIssues::add);
+        return plannedIssues;
     }
 
 }

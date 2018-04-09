@@ -2,6 +2,7 @@ package model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,13 +16,16 @@ import java.util.Date;
 public class CalendarEvent {
 
     @Id
-    @GeneratedValue
-    private Long id;
+    @GeneratedValue(generator="uuid2")
+    @GenericGenerator(name = "uuid2", strategy = "uuid2")
+    private String id;
     @Column
     private Date date;
     @Column
     private String content;
     @Column
-    private String userId;
+    private String username;
+    @Column
+    private String boardId;
 
 }
