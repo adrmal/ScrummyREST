@@ -21,7 +21,7 @@ public class BoardUser {
     @Column
     private String username;
     @Column
-    private String userRole;
+    private BoardUserRole userRole;
     @Column
     private String boardId;
 

@@ -2,12 +2,12 @@ package rest;
 
 import model.IssueRemark;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import persistence.IssueRemarkRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -19,12 +19,41 @@ public class IssueRemarkController {
     private IssueRemarkRepository issueRemarkRepository;
 
     @RequestMapping(path = "", method = GET)
-    public List<IssueRemark> getAllIssueRemarks() {
-        List<IssueRemark> issueRemarks = new ArrayList<>();
+    public List<IssueRemark> getAllIssueRemarks(
+            @RequestParam(required = false) String boardId) {
+        List<IssueRemark> remarks = new ArrayList<>();
         issueRemarkRepository
                 .findAll()
-                .forEach(issueRemarks::add);
-        return issueRemarks;
+                .forEach(remarks::add);
+
+        if(boardId != null && !boardId.isEmpty()) {
+            remarks = remarks
+                    .stream()
+                    .filter(remark -> remark.getBoardId().equals(boardId))
+                    .collect(Collectors.toList());
+        }
+
+        return remarks;
+    }
+
+    @RequestMapping(path = "/{remarkId}", method = GET)
+    public IssueRemark getIssueRemark(@PathVariable String remarkId) {
+        return issueRemarkRepository.findById(remarkId).orElse(null);
+    }
+
+    @RequestMapping(method = POST)
+    public void addIssueRemark(@RequestBody IssueRemark remark) {
+        issueRemarkRepository.save(remark);
+    }
+
+    @RequestMapping(path = "/{remarkId}", method = PUT)
+    public void updateIssueRemark(@RequestBody IssueRemark remark, @PathVariable String remarkId) {
+        issueRemarkRepository.save(remark);
+    }
+
+    @RequestMapping(path = "/{remarkId}", method = DELETE)
+    public void deleteIssueRemark(@PathVariable String remarkId) {
+        issueRemarkRepository.deleteById(remarkId);
     }
 
 }
