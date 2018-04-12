@@ -22,6 +22,7 @@ public class BoardUserController {
     @RequestMapping(path = "", method = GET)
     public List<BoardUser> getAllBoardUsers(
             @RequestParam(required = false) String boardId,
+            @RequestParam(required = false) String username,
             @RequestParam(name = "role", required = false) String[] roles) {
         List<BoardUser> users = new ArrayList<>();
         boardUserRepository
@@ -32,6 +33,13 @@ public class BoardUserController {
             users = users
                     .stream()
                     .filter(user -> user.getBoardId().equals(boardId))
+                    .collect(Collectors.toList());
+        }
+
+        if(username != null && !username.isEmpty()) {
+            users = users
+                    .stream()
+                    .filter(user -> user.getUsername().equals(username))
                     .collect(Collectors.toList());
         }
 
