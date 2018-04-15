@@ -56,8 +56,8 @@ public class ChatMessageController {
     }
 
     @RequestMapping(method = POST)
-    public void addChatMessage(@RequestBody ChatMessage message) {
-        chatMessageRepository.save(message);
+    public ChatMessage addChatMessage(@RequestBody ChatMessage message) {
+        return chatMessageRepository.save(message);
     }
 
 }

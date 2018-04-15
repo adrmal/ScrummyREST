@@ -54,8 +54,8 @@ public class BoardUserController {
     }
 
     @RequestMapping(method = POST)
-    public void addBoardUser(@RequestBody BoardUser user) {
-        boardUserRepository.save(user);
+    public BoardUser addBoardUser(@RequestBody BoardUser user) {
+        return boardUserRepository.save(user);
     }
 
     @RequestMapping(path = "/{userId}", method = PUT)

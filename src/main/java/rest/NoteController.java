@@ -50,8 +50,8 @@ public class NoteController {
     }
 
     @RequestMapping(method = POST)
-    public void addNote(@RequestBody Note note) {
-        noteRepository.save(note);
+    public Note addNote(@RequestBody Note note) {
+        return noteRepository.save(note);
     }
 
     @RequestMapping(path = "/{noteId}", method = PUT)

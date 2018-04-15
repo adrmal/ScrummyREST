@@ -50,8 +50,8 @@ public class CalendarEventController {
     }
 
     @RequestMapping(method = POST)
-    public void addCalendarEvent(@RequestBody CalendarEvent event) {
-        calendarEventRepository.save(event);
+    public CalendarEvent addCalendarEvent(@RequestBody CalendarEvent event) {
+        return calendarEventRepository.save(event);
     }
 
     @RequestMapping(path = "/{eventId}", method = PUT)

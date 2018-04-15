@@ -42,8 +42,8 @@ public class IssueRemarkController {
     }
 
     @RequestMapping(method = POST)
-    public void addIssueRemark(@RequestBody IssueRemark remark) {
-        issueRemarkRepository.save(remark);
+    public IssueRemark addIssueRemark(@RequestBody IssueRemark remark) {
+        return issueRemarkRepository.save(remark);
     }
 
     @RequestMapping(path = "/{remarkId}", method = PUT)

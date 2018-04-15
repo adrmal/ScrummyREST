@@ -42,8 +42,8 @@ public class PlannedIssueController {
     }
 
     @RequestMapping(method = POST)
-    public void addPlannedIssue(@RequestBody PlannedIssue issue) {
-        plannedIssueRepository.save(issue);
+    public PlannedIssue addPlannedIssue(@RequestBody PlannedIssue issue) {
+        return plannedIssueRepository.save(issue);
     }
 
     @RequestMapping(path = "/{issueId}", method = DELETE)

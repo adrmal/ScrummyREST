@@ -42,8 +42,8 @@ public class SuggestedIssueController {
     }
 
     @RequestMapping(method = POST)
-    public void addSuggestedIssue(@RequestBody SuggestedIssue issue) {
-        suggestedIssueRepository.save(issue);
+    public SuggestedIssue addSuggestedIssue(@RequestBody SuggestedIssue issue) {
+        return suggestedIssueRepository.save(issue);
     }
 
     @RequestMapping(path = "/{issueId}", method = PUT)
