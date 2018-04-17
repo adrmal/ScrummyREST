@@ -26,5 +26,7 @@ public class Note {
     private String username;
     @Column
     private String boardId;
+    @Column
+    private String jiraUrl;
 
 }

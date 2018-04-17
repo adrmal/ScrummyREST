@@ -20,7 +20,8 @@ public class PlannedIssueController {
 
     @RequestMapping(path = "", method = GET)
     public List<PlannedIssue> getAllPlannedIssues(
-            @RequestParam(required = false) String boardId) {
+            @RequestParam(required = false) String boardId,
+            @RequestParam(required = false) String jiraUrl) {
         List<PlannedIssue> issues = new ArrayList<>();
         plannedIssueRepository
                 .findAll()
@@ -30,6 +31,13 @@ public class PlannedIssueController {
             issues = issues
                     .stream()
                     .filter(issue -> issue.getBoardId().equals(boardId))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            issues = issues
+                    .stream()
+                    .filter(issue -> issue.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 

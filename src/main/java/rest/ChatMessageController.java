@@ -25,7 +25,8 @@ public class ChatMessageController {
     public List<ChatMessage> getAllChatMessages(
             @RequestParam(required = false) String boardId,
             @RequestParam(required = false) String username1,
-            @RequestParam(required = false) String username2) {
+            @RequestParam(required = false) String username2,
+            @RequestParam(required = false) String jiraUrl) {
         List<ChatMessage> messages = new ArrayList<>();
         chatMessageRepository
                 .findAll()
@@ -49,6 +50,13 @@ public class ChatMessageController {
             messages = messages
                     .stream()
                     .filter(message -> message.getUsernameFrom().equals(username2) || message.getUsernameTo().equals(username2))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            messages = messages
+                    .stream()
+                    .filter(message -> message.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 

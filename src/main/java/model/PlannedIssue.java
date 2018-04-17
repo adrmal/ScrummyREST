@@ -26,6 +26,8 @@ public class PlannedIssue {
     @Column
     private String boardId;
     @Column
+    private String jiraUrl;
+    @Column
     private Date createdAt;
 
 }

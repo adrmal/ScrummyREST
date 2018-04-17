@@ -23,6 +23,7 @@ public class BoardUserController {
     public List<BoardUser> getAllBoardUsers(
             @RequestParam(required = false) String boardId,
             @RequestParam(required = false) String username,
+            @RequestParam(required = false) String jiraUrl,
             @RequestParam(name = "role", required = false) String[] roles) {
         List<BoardUser> users = new ArrayList<>();
         boardUserRepository
@@ -40,6 +41,13 @@ public class BoardUserController {
             users = users
                     .stream()
                     .filter(user -> user.getUsername().equals(username))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            users = users
+                    .stream()
+                    .filter(user -> user.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 

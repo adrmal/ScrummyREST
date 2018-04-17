@@ -20,7 +20,8 @@ public class IssueRemarkController {
 
     @RequestMapping(path = "", method = GET)
     public List<IssueRemark> getAllIssueRemarks(
-            @RequestParam(required = false) String boardId) {
+            @RequestParam(required = false) String boardId,
+            @RequestParam(required = false) String jiraUrl) {
         List<IssueRemark> remarks = new ArrayList<>();
         issueRemarkRepository
                 .findAll()
@@ -30,6 +31,13 @@ public class IssueRemarkController {
             remarks = remarks
                     .stream()
                     .filter(remark -> remark.getBoardId().equals(boardId))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            remarks = remarks
+                    .stream()
+                    .filter(remark -> remark.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 

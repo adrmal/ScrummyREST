@@ -21,7 +21,8 @@ public class CalendarEventController {
     @RequestMapping(path = "", method = GET)
     public List<CalendarEvent> getAllCalendarEvents(
             @RequestParam(required = false) String boardId,
-            @RequestParam(required = false) String username) {
+            @RequestParam(required = false) String username,
+            @RequestParam(required = false) String jiraUrl) {
         List<CalendarEvent> events = new ArrayList<>();
         calendarEventRepository
                 .findAll()
@@ -38,6 +39,13 @@ public class CalendarEventController {
             events = events
                     .stream()
                     .filter(event -> event.getUsername().equals(username))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            events = events
+                    .stream()
+                    .filter(event -> event.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 
@@ -62,7 +70,8 @@ public class CalendarEventController {
     @RequestMapping(method = DELETE)
     public void deleteAllCalendarEvents(
             @RequestParam(required = true) String boardId,
-            @RequestParam(required = true) String username) {
+            @RequestParam(required = true) String username,
+            @RequestParam(required = true) String jiraUrl) {
         List<CalendarEvent> events = new ArrayList<>();
         calendarEventRepository
                 .findAll()
@@ -76,6 +85,11 @@ public class CalendarEventController {
         events = events
                 .stream()
                 .filter(event -> event.getUsername().equals(username))
+                .collect(Collectors.toList());
+
+        events = events
+                .stream()
+                .filter(event -> event.getJiraUrl().equals(jiraUrl))
                 .collect(Collectors.toList());
 
         calendarEventRepository.deleteAll(events);

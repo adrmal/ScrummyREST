@@ -24,5 +24,7 @@ public class BoardUser {
     private BoardUserRole userRole;
     @Column
     private String boardId;
+    @Column
+    private String jiraUrl;
 
 }

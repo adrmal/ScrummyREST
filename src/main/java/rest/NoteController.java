@@ -21,7 +21,8 @@ public class NoteController {
     @RequestMapping(path = "", method = GET)
     public List<Note> getAllNotes(
             @RequestParam(required = false) String boardId,
-            @RequestParam(required = false) String username) {
+            @RequestParam(required = false) String username,
+            @RequestParam(required = false) String jiraUrl) {
         List<Note> notes = new ArrayList<>();
         noteRepository
                 .findAll()
@@ -38,6 +39,13 @@ public class NoteController {
             notes = notes
                     .stream()
                     .filter(note -> note.getUsername().equals(username))
+                    .collect(Collectors.toList());
+        }
+
+        if(jiraUrl != null && !jiraUrl.isEmpty()) {
+            notes = notes
+                    .stream()
+                    .filter(note -> note.getJiraUrl().equals(jiraUrl))
                     .collect(Collectors.toList());
         }
 
@@ -62,7 +70,8 @@ public class NoteController {
     @RequestMapping(method = DELETE)
     public void deleteAllNotes(
             @RequestParam(required = true) String boardId,
-            @RequestParam(required = true) String username) {
+            @RequestParam(required = true) String username,
+            @RequestParam(required = true) String jiraUrl) {
         List<Note> notes = new ArrayList<>();
         noteRepository
                 .findAll()
@@ -76,6 +85,11 @@ public class NoteController {
         notes = notes
                 .stream()
                 .filter(note -> note.getUsername().equals(username))
+                .collect(Collectors.toList());
+
+        notes = notes
+                .stream()
+                .filter(note -> note.getJiraUrl().equals(jiraUrl))
                 .collect(Collectors.toList());
 
         noteRepository.deleteAll(notes);
