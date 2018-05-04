@@ -31,5 +31,7 @@ public class SuggestedIssue {
     private String jiraUrl;
     @Column
     private Date createdAt;
+    @Column
+    private Date updatedAt;
 
 }

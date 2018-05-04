@@ -3,20 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="30e95dbd-f5b3-44df-a771-ebe3e26a3370" name="Default" comment="added property jiraUrl to all entities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/BoardUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/BoardUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/CalendarEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CalendarEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/ChatMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/IssueRemark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/IssueRemark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PlannedIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/PlannedIssue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rest/BoardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/BoardUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/ChatMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/ChatMessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,118 +36,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IssueRemark.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/IssueRemark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IssueRemarkController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-              <folding>
-                <element signature="e#1423#1424#0" expanded="true" />
-                <element signature="e#1480#1481#0" expanded="true" />
-                <element signature="e#1814#1815#0" expanded="true" />
-                <element signature="e#1872#1873#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Note.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Note.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NoteController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/NoteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#1447#1448#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1648#1649#0" expanded="true" />
-                <element signature="e#1785#1786#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-                <element signature="e#2643#2644#0" expanded="true" />
-                <element signature="e#2692#2693#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlannedIssue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/PlannedIssue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlannedIssueController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1490#1491#0" expanded="true" />
-                <element signature="e#1616#1617#0" expanded="true" />
-                <element signature="e#1674#1675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardUserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoardUserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rest/BoardUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-201">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuggestedIssue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuggestedIssueController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="51">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
-                <element signature="e#1864#1865#0" expanded="true" />
-                <element signature="e#1924#1925#0" expanded="true" />
+                <element signature="e#2165#2166#0" expanded="true" />
+                <element signature="e#2218#2219#0" expanded="true" />
+                <element signature="e#2532#2533#0" expanded="true" />
+                <element signature="e#2586#2587#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalendarEventController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="e#3424#3425#0" expanded="true" />
+                <element signature="e#3483#3484#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -211,18 +130,18 @@
         <option value="$PROJECT_DIR$/src/main/java/model/BoardUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/CalendarEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/ChatMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/IssueRemark.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Note.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/PlannedIssue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/BoardUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/ChatMessageController.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/NoteController.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java" />
         <option value="$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/IssueRemark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java" />
       </list>
     </option>
   </component>
@@ -250,11 +169,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -262,63 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-              <item name="main" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-              <item name="model" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-              <item name="persistence" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-              <item name="rest" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
-              <item name="view" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
-              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
-              <item name="resources" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -395,6 +256,63 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
+              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
+              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="1abcf292:AndroidViewProjectNode" />
+              <item name="ScrummyREST" type="e9137016:NonAndroidModuleNode" />
+              <item name="resources" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+              <item name="main" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+              <item name="model" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+              <item name="persistence" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+              <item name="rest" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ScrummyREST" type="58d84e3e:PackageViewProjectNode" />
+              <item name="ScrummyREST" type="616d4139:PackageViewModuleNode" />
+              <item name="view" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Production">
           <expand>
@@ -437,7 +355,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BIFProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="database.main" />
@@ -534,7 +452,9 @@
       <workItem from="1523129889791" duration="3439000" />
       <workItem from="1523134890975" duration="27818000" />
       <workItem from="1523696059547" duration="4703000" />
-      <workItem from="1523958043682" duration="3914000" />
+      <workItem from="1523958043682" duration="7488000" />
+      <workItem from="1524301919990" duration="1879000" />
+      <workItem from="1525428445246" duration="261000" />
     </task>
     <task id="LOCAL-00001" summary="added column userId">
       <created>1523188775960</created>
@@ -571,14 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523822129505</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added property jiraUrl to all entities">
+      <created>1523983998815</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523983998815</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99554000" />
+    <option name="totallyTimeSpent" value="105268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <frame x="1273" y="0" width="1294" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="1" />
@@ -602,7 +529,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.47603485" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12480127" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27471638" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.3298887" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="9" />
@@ -689,7 +616,8 @@
     <MESSAGE value="REST methods" />
     <MESSAGE value="added query param to getAllBoardUsers method" />
     <MESSAGE value="POST methods return entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="POST methods return entity" />
+    <MESSAGE value="added property jiraUrl to all entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="added property jiraUrl to all entities" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -876,10 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="283" column="19" selection-start-line="283" selection-start-column="19" selection-end-line="283" selection-end-column="19" />
-          <folding>
-            <element signature="e#10251#10252#0" expanded="true" />
-            <element signature="e#10289#10290#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,12 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="263" column="11" lean-forward="true" selection-start-line="263" selection-start-column="11" selection-end-line="263" selection-end-column="11" />
-          <folding>
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8680#8681#0" expanded="true" />
-            <element signature="e#9141#9142#0" expanded="true" />
-            <element signature="e#9199#9200#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,14 +919,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding>
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-40">
+          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/NoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-591">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/BoardUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1019,50 +961,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/BoardUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/CalendarEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-          <folding>
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/ChatMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ChatMessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="21" column="55" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="55" />
-          <folding>
-            <element signature="e#2167#2168#0" expanded="true" />
-            <element signature="e#2225#2226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/IssueRemark.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
@@ -1076,19 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/IssueRemarkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding>
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1872#1873#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/PlannedIssue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1096,51 +982,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/NoteController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="119">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/ChatMessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="24" column="48" lean-forward="true" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/CalendarEventController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#2643#2644#0" expanded="true" />
-            <element signature="e#2692#2693#0" expanded="true" />
+            <element signature="e#3424#3425#0" expanded="true" />
+            <element signature="e#3483#3484#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/SuggestedIssue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="442">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/PlannedIssueController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/IssueRemark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="136">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rest/BoardUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#1433#1434#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1616#1617#0" expanded="true" />
-            <element signature="e#1674#1675#0" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2218#2219#0" expanded="true" />
+            <element signature="e#2532#2533#0" expanded="true" />
+            <element signature="e#2586#2587#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/SuggestedIssueController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1924#1925#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
@@ -1148,13 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rest/BoardUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
         </state>
       </provider>
     </entry>
