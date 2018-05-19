@@ -50,8 +50,23 @@ public class PlannedIssueController {
     }
 
     @RequestMapping(method = POST)
-    public PlannedIssue addPlannedIssue(@RequestBody PlannedIssue issue) {
-        return plannedIssueRepository.save(issue);
+    public Iterable<PlannedIssue> addAllPlannedIssues(@RequestBody List<PlannedIssue> issues) {
+        if(issues == null || issues.isEmpty()) {
+            return null;
+        }
+        List<PlannedIssue> allIssues = new ArrayList<>();
+        plannedIssueRepository.findAll().forEach(allIssues::add);
+
+        allIssues
+                .stream()
+                .filter(issue -> issue.getJiraUrl().equals(issues.get(0).getJiraUrl()))
+                .filter(issue -> issue.getBoardId().equals(issues.get(0).getBoardId()))
+                .forEach(issue -> {
+            if(!issues.contains(issue)) {
+                plannedIssueRepository.delete(issue);
+            }
+        });
+        return plannedIssueRepository.saveAll(issues);
     }
 
     @RequestMapping(path = "/{issueId}", method = DELETE)
