@@ -61,10 +61,10 @@ public class PlannedIssueController {
                 .filter(issue -> issue.getJiraUrl().equals(jiraUrl))
                 .filter(issue -> issue.getBoardId().equals(boardId))
                 .forEach(issue -> {
-            if(!issues.contains(issue)) {
-                plannedIssueRepository.delete(issue);
-            }
-        });
+                    if(!issues.contains(issue)) {
+                        plannedIssueRepository.delete(issue);
+                    }
+                });
         return plannedIssueRepository.saveAll(issues);
     }
 

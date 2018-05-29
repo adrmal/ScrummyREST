@@ -21,6 +21,7 @@ public class IssueRemarkController {
     @RequestMapping(path = "", method = GET)
     public List<IssueRemark> getAllIssueRemarks(
             @RequestParam(required = false) String boardId,
+            @RequestParam(required = false) String issueKey,
             @RequestParam(required = false) String jiraUrl) {
         List<IssueRemark> remarks = new ArrayList<>();
         issueRemarkRepository
@@ -31,6 +32,13 @@ public class IssueRemarkController {
             remarks = remarks
                     .stream()
                     .filter(remark -> remark.getBoardId().equals(boardId))
+                    .collect(Collectors.toList());
+        }
+
+        if(issueKey != null && !issueKey.isEmpty()) {
+            remarks = remarks
+                    .stream()
+                    .filter(remark -> remark.getIssueKey().equals(issueKey))
                     .collect(Collectors.toList());
         }
 
